@@ -61,6 +61,7 @@
 | Thành tựu          | `Achievement`          |
 | Giao diện nền popup| `Background`           |
 
+### Nếu đã dùng quy tắc ở trên thì không cần đọc gợi ý nâng cao, lưu ý chỉ chọn 1 cho nhất quán 
 ### Gợi ý nâng cao (định dạng tối ưu nên dùng nếu nhất quán toàn bộ team):
 ```
 [type]_[feature?]_[color]_[size?]_[index?]_[9scale?]
