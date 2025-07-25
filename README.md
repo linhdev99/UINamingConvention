@@ -121,6 +121,41 @@
 | Quay số may mắn        | `LuckySpin`           |
 | Hướng dẫn chơi         | `Guide`               |
 
+### Gợi ý tên feature cho game chiến thuật (Strategy)
+
+| Feature UI           | Gợi ý đặt tên feature |
+| -------------------- | --------------------- |
+| Nhân vật             | `Character`           |
+| Đội hình             | `Formation`           |
+| Kỹ năng              | `Skill`               |
+| Trang bị             | `Equipment`           |
+| Chiến dịch           | `Campaign`            |
+| Bản đồ               | `Map`                 |
+| Quân đội             | `Army`                |
+| Lực lượng            | `Faction`             |
+| Nâng cấp nhân vật    | `UpgradeCharacter`    |
+| Quản lý đội hình     | `ManageFormation`     |
+| Xây dựng căn cứ      | `BaseBuilding`        |
+| Thu thập tài nguyên  | `ResourceCollection`  |
+| Nghiên cứu công nghệ | `TechResearch`        |
+| Phòng thủ            | `Defense`             |
+| Tấn công             | `Attack`              |
+| Chiếm đóng           | `Occupation`          |
+| Giao dịch            | `Trade`               |
+| Quản lý quân lính    | `TroopManagement`     |
+| Sự kiện đặc biệt     | `SpecialEvent`        |
+| Đấu trường           | `Arena`               |
+| Nhiệm vụ phụ         | `SideQuest`           |
+| Hợp tác đồng minh    | `Alliance`            |
+| Thống kê trận đấu    | `BattleStats`         |
+| Xếp hạng             | `Ranking`             |
+| Huấn luyện           | `Training`            |
+| Mở rộng lãnh thổ     | `TerritoryExpansion`  |
+| Chiến thuật          | `Strategy`            |
+| Quản lý tài nguyên   | `ResourceManagement`  |
+| Thám hiểm            | `Exploration`         |
+| Đàm phán             | `Diplomacy`           |
+
 ### Gợi ý tên màu sắc
 
 | Màu sắc    | Tên đặt màu | Hiển thị màu                                                                                                |
