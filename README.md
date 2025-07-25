@@ -132,15 +132,15 @@
 | Dài        | `Long`             |
 | Ngắn       | `Short`            |
 
-### Lưu ý bổ sung
-
-- Tránh sử dụng tiếng Việt hoặc ký tự đặc biệt trong tên file.
-- Chỉ sử dụng chữ cái viết hoa cho các phần bắt buộc, giữ nhất quán kiểu chữ trong toàn bộ dự án.
-- Nếu tài nguyên dùng cho nhiều tính năng, bỏ qua phần `feature` để dùng chung.
-- Đối với các tài nguyên có nhiều biến thể màu hoặc kích thước, luôn bổ sung phần `color` và `size` để dễ phân biệt.
-- Đặt tên ngắn gọn, dễ hiểu, ưu tiên mô tả chức năng chính của tài nguyên.
-- Nếu có nhiều phiên bản, luôn thêm phần `index` để tránh ghi đè file.
-- Sử dụng dấu gạch dưới `_` để phân tách các phần, không dùng dấu cách hoặc dấu gạch ngang `-`.
+> ⚠️ **Lưu ý bổ sung quan trọng:**
+>
+> - Không sử dụng tiếng Việt hoặc ký tự đặc biệt trong tên file.
+> - Chỉ viết hoa chữ cái đầu của các phần bắt buộc, giữ nhất quán kiểu chữ trong toàn bộ dự án.
+> - Nếu tài nguyên dùng cho nhiều tính năng, hãy bỏ qua phần `feature` để dùng chung.
+> - Với tài nguyên có nhiều biến thể màu hoặc kích thước, luôn bổ sung phần `color` và `size` để dễ phân biệt.
+> - Đặt tên ngắn gọn, dễ hiểu, ưu tiên mô tả chức năng chính của tài nguyên.
+> - Nếu có nhiều phiên bản, luôn thêm phần `index` để tránh ghi đè file.
+> - Sử dụng dấu gạch dưới `_` để phân tách các phần, không dùng dấu cách hoặc dấu gạch ngang `-`.
 
 ### Nếu đã dùng quy tắc ở trên thì không cần đọc gợi ý nâng cao, lưu ý chỉ chọn 1 cho nhất quán
 
