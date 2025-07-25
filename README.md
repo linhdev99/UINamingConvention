@@ -8,14 +8,14 @@
 
 ### Mô tả các phần:
 
-| Thành phần | Bắt buộc | Mô tả                                                                                                                                               |
-| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `9scale`   | ❌       | Nếu sprite dùng 9-slice, thêm tiền tố `9scale` hoặc hậu tố `_9scale`                                                                                |
-| `type`     | ✅       | Kiểu tài nguyên: `btn`, `icon`, `frame`, `bg`, `avatar`, `popup`, `title`, ... Có thể là cụm từ ghép như `popupBackground` nếu cần rõ chức năng phụ |
-| `feature`  | ❌       | Tên tính năng sử dụng riêng biệt: `Native`, `Shop`, `Setting`, ... Nếu dùng chung giữa nhiều UI thì bỏ qua                                          |
-| `color`    | ✅       | Màu chính: `Gray`, `Blue`, `Red`, `Yellow`, ...                                                                                                     |
-| `size`     | ❌       | Kích cỡ: `Big`, `Small`, `Tiny`, `Wide`, ...                                                                                                        |
-| `index`    | ❌       | Phiên bản thứ tự: `1`, `2`, `3`, ...                                                                                                                |
+| Thành phần | Bắt buộc | Mô tả                                                                                                                                       |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `9scale`   | ❌       | Nếu sprite dùng 9-slice, thêm tiền tố `9scale` hoặc hậu tố `_9scale`                                                                        |
+| `type`     | ✅       | Kiểu tài nguyên: `btn`, `icon`, `frame`, `bg`, `avatar`, `popup`, `title`, ... Có thể là cụm từ ghép như `popupBg` nếu cần rõ chức năng phụ |
+| `feature`  | ❌       | Tên tính năng sử dụng riêng biệt: `Native`, `Shop`, `Setting`, ... Nếu dùng chung giữa nhiều UI thì bỏ qua                                  |
+| `color`    | ✅       | Màu chính: `Gray`, `Blue`, `Red`, `Yellow`, ...                                                                                             |
+| `size`     | ❌       | Kích cỡ: `Big`, `Small`, `Tiny`, `Wide`, ...                                                                                                |
+| `index`    | ❌       | Phiên bản thứ tự: `1`, `2`, `3`, ...                                                                                                        |
 
 ### Ví dụ đặt tên
 
@@ -50,6 +50,17 @@
 | `titleEventHalloweenPurple_Big_1` | Tiêu đề sự kiện Halloween, màu tím, to, bản 1                                   |
 | `iconQuestStarYellow_Small_2`     | Icon sao nhiệm vụ, vàng, nhỏ, bản 2                                             |
 
+### Ví dụ về chức năng phụ
+
+| Tên File           | Chức năng phụ | Giải Thích                                     |
+| ------------------ | ------------- | ---------------------------------------------- |
+| `popupBg`          | `Bg`          | Hình nền của popup, phân biệt với popup chính  |
+| `btnShopRed_Small` | `Shop`        | Nút dùng riêng cho cửa hàng                    |
+| `iconAvatarGray`   | `Avatar`      | Icon đại diện người dùng                       |
+| `frameProfileBlue` | `Profile`     | Frame dành riêng cho giao diện hồ sơ           |
+| `titleMatchmaking` | `Matchmaking` | Tiêu đề dùng riêng cho UI ghép trận            |
+| `iconQuestStar`    | `QuestStar`   | Icon sao nhiệm vụ, phân biệt với icon nhiệm vụ |
+
 ### Gợi ý tên feature
 
 | Feature UI             | Gợi ý đặt tên feature |
@@ -75,6 +86,16 @@
 | Thẻ bài                | `Card`                |
 | Màn hình kết thúc trận | `Result`              |
 | Giao diện chính        | `MainUI`              |
+| Hỗ trợ khách hàng      | `Support`             |
+| Sự kiện đặc biệt       | `SpecialEvent`        |
+| Thông báo              | `Notification`        |
+| Quà đăng nhập          | `LoginReward`         |
+| Bảng xếp hạng          | `Leaderboard`         |
+| Hòm thư                | `Mailbox`             |
+| Đổi thưởng             | `Redeem`              |
+| Nạp tiền               | `TopUp`               |
+| Quay số may mắn        | `LuckySpin`           |
+| Hướng dẫn chơi         | `Guide`               |
 
 ### Gợi ý tên màu sắc
 
