@@ -23,7 +23,7 @@
 - Các thành phần tiếp theo (`feature`, `color`, `size`, ...) bắt đầu bằng chữ cái viết hoa để phân biệt rõ ràng, ví dụ: `btnShopRed_Small_2`.
 - Giữ nhất quán quy tắc này trong toàn bộ dự án để dễ đọc và quản lý tài nguyên.
 
-> ⚠️ **Lưu ý bổ sung quan trọng:**
+> ⚠️ **Lưu ý quan trọng:**
 >
 > - Không sử dụng tiếng Việt hoặc ký tự đặc biệt trong tên file.
 > - Chỉ viết hoa chữ cái đầu của các phần bắt buộc, giữ nhất quán kiểu chữ trong toàn bộ dự án.
