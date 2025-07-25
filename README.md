@@ -23,9 +23,6 @@
 - Nếu sử dụng 9-slice, tên file phải bắt đầu bằng `9scale`, ví dụ: `9scaleFrameBlue_1` hoặc `9scale_frameBlue_1`, sau đó đến các thành phần còn lại (`type`, `feature`, `color`, `size`, ...).
 - Giữ nhất quán quy tắc này trong toàn bộ dự án để dễ đọc và quản lý tài nguyên.
 
-> ⚠️ **Lưu ý về 9scale:**  
-> Chỉ chọn một cách duy nhất (ví dụ: luôn dùng `9scaleFrameBlue_1` hoặc `9scale_frameBlue_1`) và áp dụng nhất quán trong toàn bộ dự án để tránh nhầm lẫn.
-
 > ⚠️ **Lưu ý quan trọng:**
 >
 > - Không sử dụng tiếng Việt hoặc ký tự đặc biệt trong tên file.
@@ -36,38 +33,50 @@
 > - Nếu có nhiều phiên bản, luôn thêm phần `index` để tránh ghi đè file.
 > - Sử dụng dấu gạch dưới `_` để phân tách các phần, không dùng dấu cách hoặc dấu gạch ngang `-`.
 
-### Ví dụ đặt tên
+> 💡 **Lưu ý về cách viết `9scale`:**
+>
+> - Có thể dùng `9scale` làm tiền tố (`9scale_btnShopGray_Big`) **hoặc** hậu tố (`btnShopGray_Big_9scale`), nhưng **chỉ chọn một cách duy nhất** và dùng nhất quán toàn bộ dự án.
+> - Ví dụ, nếu team quyết định dùng tiền tố, thì hãy luôn đặt như:
+>   - `9scale_frameBlue_1`, `9scale_popupWarningRed_Big`, `9scale_bgVictoryGreen`
+> - Ngược lại, nếu dùng hậu tố:
+>   - `frameBlue_1_9scale`, `popupWarningRed_Big_9scale`, `bgVictoryGreen_9scale`  
+>     ✅ **Đừng pha trộn cả hai cách trong cùng một project** để tránh nhầm lẫn và lỗi quản lý tài nguyên.
 
-| Tên File                          | Giải Thích                                                                      |
-| --------------------------------- | ------------------------------------------------------------------------------- |
-| `btnGray`                         | Nút màu xám, dùng chung                                                         |
-| `btnLoginBlue_Big`                | Nút màu xanh, to, dùng riêng cho tính năng Login                                |
-| `btnShopRed_Small_2`              | Nút đỏ, nhỏ, phiên bản thứ 2 dùng riêng trong Shop                              |
-| `bgNative_Big`                    | Background to dùng riêng trong UI Native                                        |
-| `bg_Big`                          | Background to, dùng chung                                                       |
-| `iconAvatarGray_Small`            | Icon avatar màu xám, kích thước nhỏ                                             |
-| `iconRewardYellow_1`              | Icon phần thưởng màu vàng, biến thể thứ 1                                       |
-| `frameProfileBlue_9scale`         | Frame giao diện Profile, màu xanh, dùng 9-slice                                 |
-| `avatarFriendRed_Small_2`         | Avatar bạn bè, màu đỏ, nhỏ, phiên bản thứ 2                                     |
-| `popupSetting`                    | Popup dùng riêng cho UI cài đặt                                                 |
-| `popupWarning_Red`                | Popup cảnh báo, màu đỏ                                                          |
-| `titleMatchmakingBlue_Big`        | Tiêu đề trong UI matchmaking, màu xanh, to                                      |
-| `9scale_btnShopGray_Big_3`        | Button xám, to, dùng trong Shop, 9scale, phiên bản thứ 3 (nếu giữ `9scale` đầu) |
-| `btnTutorialGreen_Tiny`           | Button xanh lá nhỏ dành riêng cho Tutorial                                      |
-| `iconCurrencyGold_Small`          | Icon tiền vàng, nhỏ                                                             |
-| `bgDailyRewardGray_9scale`        | Background dùng trong Daily Reward, màu xám, có 9-slice                         |
-| `iconLevelUpBlue_Small`           | Icon lên cấp, màu xanh, nhỏ                                                     |
-| `frameEventRed_Big_1`             | Frame dùng trong sự kiện, đỏ, to, bản 1                                         |
-| `btnInviteFriendPurple_Small`     | Nút mời bạn, màu tím, nhỏ                                                       |
-| `bgVictoryGreen_Big`              | Background chiến thắng, màu xanh lá, to                                         |
-| `iconMissionYellow_2`             | Icon nhiệm vụ, màu vàng, bản số 2                                               |
-| `popupBackgroundGray_1`           | Hình nền của popup, màu xám, phiên bản 1                                        |
-| `iconGachaTicketRed_Tiny`         | Icon vé gacha, màu đỏ, kích thước nhỏ                                           |
-| `frameAchievementGold_Wide_2`     | Frame thành tựu, màu vàng, rộng, bản 2                                          |
-| `btnDailyRewardOrange_Tall_1`     | Nút thưởng ngày, màu cam, cao, bản 1                                            |
-| `9scale_popupUpgradeBlue_Big`     | Popup nâng cấp, màu xanh, to, có 9-slice                                        |
-| `titleEventHalloweenPurple_Big_1` | Tiêu đề sự kiện Halloween, màu tím, to, bản 1                                   |
-| `iconQuestStarYellow_Small_2`     | Icon sao nhiệm vụ, vàng, nhỏ, bản 2                                             |
+## 🧪 Ví Dụ Đặt Tên
+
+| Tên File                          | Giải Thích                                                   |
+| --------------------------------- | ------------------------------------------------------------ |
+| `9scale_btnShopGray_Big_3`        | Button xám, to, dùng trong Shop, có 9-slice, phiên bản thứ 3 |
+| `9scaleBtnShopGray_Big_3`         | Button xám, to, dùng trong Shop, có 9-slice, phiên bản thứ 3 |
+| `9scale_frameProfileBlue_1`       | Frame hồ sơ, màu xanh, có 9-slice, phiên bản 1               |
+| `9scaleFrameProfileBlue_1`        | Frame hồ sơ, màu xanh, có 9-slice, phiên bản 1               |
+| `9scale_popupUpgradeBlue_Big`     | Popup nâng cấp, màu xanh, to, có 9-slice                     |
+| `9scalePopupUpgradeBlue_Big`      | Popup nâng cấp, màu xanh, to, có 9-slice                     |
+| `bgDailyRewardGray_9scale`        | Background thưởng ngày, màu xám, có 9-slice                  |
+| `frameProfileBlue_9scale`         | Frame giao diện Profile, màu xanh, dùng 9-slice              |
+| `btnGray`                         | Nút màu xám, dùng chung                                      |
+| `btnLoginBlue_Big`                | Nút màu xanh, to, dùng riêng cho tính năng Login             |
+| `btnShopRed_Small_2`              | Nút đỏ, nhỏ, phiên bản thứ 2 dùng riêng trong Shop           |
+| `btnTutorialGreen_Tiny`           | Button xanh lá nhỏ dành riêng cho Tutorial                   |
+| `btnInviteFriendPurple_Small`     | Nút mời bạn, màu tím, nhỏ                                    |
+| `btnDailyRewardOrange_Tall_1`     | Nút thưởng ngày, màu cam, cao, bản 1                         |
+| `bgNative_Big`                    | Background to dùng riêng trong UI Native                     |
+| `bg_Big`                          | Background to, dùng chung                                    |
+| `iconAvatarGray_Small`            | Icon avatar màu xám, kích thước nhỏ                          |
+| `iconRewardYellow_1`              | Icon phần thưởng màu vàng, biến thể thứ 1                    |
+| `iconCurrencyGold_Small`          | Icon tiền vàng, nhỏ                                          |
+| `iconLevelUpBlue_Small`           | Icon lên cấp, màu xanh, nhỏ                                  |
+| `iconMissionYellow_2`             | Icon nhiệm vụ, màu vàng, bản số 2                            |
+| `iconGachaTicketRed_Tiny`         | Icon vé gacha, màu đỏ, kích thước nhỏ                        |
+| `iconQuestStarYellow_Small_2`     | Icon sao nhiệm vụ, vàng, nhỏ, bản 2                          |
+| `avatarFriendRed_Small_2`         | Avatar bạn bè, màu đỏ, nhỏ, phiên bản thứ 2                  |
+| `frameAchievementGold_Wide_2`     | Frame thành tựu, màu vàng, rộng, bản 2                       |
+| `frameEventRed_Big_1`             | Frame dùng trong sự kiện, đỏ, to, bản 1                      |
+| `popupSetting`                    | Popup dùng riêng cho UI cài đặt                              |
+| `popupWarning_Red`                | Popup cảnh báo, màu đỏ                                       |
+| `popupBackgroundGray_1`           | Hình nền của popup, màu xám, phiên bản 1                     |
+| `titleMatchmakingBlue_Big`        | Tiêu đề trong UI matchmaking, màu xanh, to                   |
+| `titleEventHalloweenPurple_Big_1` | Tiêu đề sự kiện Halloween, màu tím, to, bản 1                |
 
 ### Ví dụ về chức năng phụ
 
