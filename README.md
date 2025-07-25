@@ -35,12 +35,11 @@
 
 > 💡 **Lưu ý về cách viết `9scale`:**
 >
-> - Có thể dùng `9scale` làm tiền tố (`9scale_btnShopGray_Big`) **hoặc** hậu tố (`btnShopGray_Big_9scale`), nhưng **chỉ chọn một cách duy nhất** và dùng nhất quán toàn bộ dự án.
-> - Ví dụ, nếu team quyết định dùng tiền tố, thì hãy luôn đặt như:
->   - `9scale_frameBlue_1`, `9scale_popupWarningRed_Big`, `9scale_bgVictoryGreen`
-> - Ngược lại, nếu dùng hậu tố:
->   - `frameBlue_1_9scale`, `popupWarningRed_Big_9scale`, `bgVictoryGreen_9scale`  
->     ✅ **Đừng pha trộn cả hai cách trong cùng một project** để tránh nhầm lẫn và lỗi quản lý tài nguyên.
+> - Chỉ **dùng tiền tố** `9scale` (ví dụ: `9scale_frameBlue_1` hoặc `9scaleFrameBlue_1`) và **tuyệt đối không dùng hậu tố** như `frameBlue_1_9scale`.
+> - ✅ **Chỉ chọn một trong hai cách viết tiền tố (`camelCase` hoặc `snake_case`) và áp dụng nhất quán trong toàn bộ dự án**:
+>   - Nếu chọn `snake_case`: `9scale_frameBlue_1`, `9scale_popupWarningRed_Big`, `9scale_bgVictoryGreen`
+>   - Nếu chọn `camelCase`: `9scaleFrameBlue_1`, `9scalePopupWarningRedBig`, `9scaleBgVictoryGreen`
+> - 🚫 Không pha trộn hai cách viết trong cùng một project để tránh nhầm lẫn và dễ quản lý tài nguyên.
 
 ## 🧪 Ví Dụ Đặt Tên
 
