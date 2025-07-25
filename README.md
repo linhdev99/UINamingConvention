@@ -48,8 +48,8 @@
 | `9scaleFrameProfileBlue_1`        | Frame hồ sơ, màu xanh, có 9-slice, phiên bản 1               |
 | `9scale_popupUpgradeBlue_Big`     | Popup nâng cấp, màu xanh, to, có 9-slice                     |
 | `9scalePopupUpgradeBlue_Big`      | Popup nâng cấp, màu xanh, to, có 9-slice                     |
-| `bgDailyRewardGray_9scale`        | Background thưởng ngày, màu xám, có 9-slice                  |
-| `frameProfileBlue_9scale`         | Frame giao diện Profile, màu xanh, dùng 9-slice              |
+| `9scaleBgDailyRewardGray`         | Background thưởng ngày, màu xám, có 9-slice                  |
+| `9scaleFrameProfileBlue`          | Frame giao diện Profile, màu xanh, dùng 9-slice              |
 | `btnGray`                         | Nút màu xám, dùng chung                                      |
 | `btnLoginBlue_Big`                | Nút màu xanh, to, dùng riêng cho tính năng Login             |
 | `btnShopRed_Small_2`              | Nút đỏ, nhỏ, phiên bản thứ 2 dùng riêng trong Shop           |
