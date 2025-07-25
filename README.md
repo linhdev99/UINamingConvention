@@ -22,7 +22,8 @@
 - Chữ cái đầu của tên file luôn viết thường.
 - Nếu sử dụng 9-slice, tên file phải bắt đầu bằng `9scale`, ví dụ: `9scaleFrameBlue_1` hoặc `9scale_frameBlue_1`, sau đó đến các thành phần còn lại (`type`, `feature`, `color`, `size`, ...).
 - Giữ nhất quán quy tắc này trong toàn bộ dự án để dễ đọc và quản lý tài nguyên.
-> **Lưu ý về 9scale:**  
+
+> ⚠️ **Lưu ý về 9scale:**  
 > Chỉ chọn một cách duy nhất (ví dụ: luôn dùng `9scaleFrameBlue_1` hoặc `9scale_frameBlue_1`) và áp dụng nhất quán trong toàn bộ dự án để tránh nhầm lẫn.
 
 > ⚠️ **Lưu ý quan trọng:**
