@@ -123,20 +123,24 @@
 
 ### Gợi ý tên màu sắc
 
-| Màu sắc    | Tên đặt màu |
-| ---------- | ----------- |
-| Xám        | `Gray`      |
-| Xanh dương | `Blue`      |
-| Đỏ         | `Red`       |
-| Vàng       | `Yellow`    |
-| Xanh lá    | `Green`     |
-| Tím        | `Purple`    |
-| Cam        | `Orange`    |
-| Vàng kim   | `Gold`      |
-| Đen        | `Black`     |
-| Trắng      | `White`     |
-| Nâu        | `Brown`     |
-| Hồng       | `Pink`      |
+| Màu sắc    | Tên đặt màu | Hiển thị màu                                                                                                |
+| ---------- | ----------- | ----------------------------------------------------------------------------------------------------------- |
+| Xám        | `Gray`      | <span style="display:inline-block;width:24px;height:16px;background:#808080;border:1px solid #ccc;"></span> |
+| Xanh dương | `Blue`      | <span style="display:inline-block;width:24px;height:16px;background:#2196F3;border:1px solid #ccc;"></span> |
+| Đỏ         | `Red`       | <span style="display:inline-block;width:24px;height:16px;background:#F44336;border:1px solid #ccc;"></span> |
+| Vàng       | `Yellow`    | <span style="display:inline-block;width:24px;height:16px;background:#FFEB3B;border:1px solid #ccc;"></span> |
+| Xanh lá    | `Green`     | <span style="display:inline-block;width:24px;height:16px;background:#4CAF50;border:1px solid #ccc;"></span> |
+| Tím        | `Purple`    | <span style="display:inline-block;width:24px;height:16px;background:#9C27B0;border:1px solid #ccc;"></span> |
+| Cam        | `Orange`    | <span style="display:inline-block;width:24px;height:16px;background:#FF9800;border:1px solid #ccc;"></span> |
+| Vàng kim   | `Gold`      | <span style="display:inline-block;width:24px;height:16px;background:#FFD700;border:1px solid #ccc;"></span> |
+| Đen        | `Black`     | <span style="display:inline-block;width:24px;height:16px;background:#222;border:1px solid #ccc;"></span>    |
+| Trắng      | `White`     | <span style="display:inline-block;width:24px;height:16px;background:#fff;border:1px solid #ccc;"></span>    |
+| Nâu        | `Brown`     | <span style="display:inline-block;width:24px;height:16px;background:#795548;border:1px solid #ccc;"></span> |
+| Hồng       | `Pink`      | <span style="display:inline-block;width:24px;height:16px;background:#E91E63;border:1px solid #ccc;"></span> |
+| Xanh ngọc  | `Cyan`      | <span style="display:inline-block;width:24px;height:16px;background:#00BCD4;border:1px solid #ccc;"></span> |
+| Xanh biển  | `Teal`      | <span style="display:inline-block;width:24px;height:16px;background:#009688;border:1px solid #ccc;"></span> |
+| Bạc        | `Silver`    | <span style="display:inline-block;width:24px;height:16px;background:#C0C0C0;border:1px solid #ccc;"></span> |
+| Đồng       | `Copper`    | <span style="display:inline-block;width:24px;height:16px;background:#B87333;border:1px solid #ccc;"></span> |
 
 ### Gợi ý tên kích thước
 
