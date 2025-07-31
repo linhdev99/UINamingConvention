@@ -156,6 +156,37 @@
 | Thám hiểm            | `Exploration`         |
 | Đàm phán             | `Diplomacy`           |
 
+### Gợi ý tên feature cho game casual
+
+| Feature UI            | Gợi ý đặt tên feature |
+| --------------------- | --------------------- |
+| Trang chủ             | `Home`                |
+| Chơi nhanh            | `QuickPlay`           |
+| Nhiệm vụ ngày         | `DailyQuest`          |
+| Vòng quay may mắn     | `LuckyWheel`          |
+| Sưu tập               | `Collection`          |
+| Thành tích            | `Achievement`         |
+| Cửa hàng vật phẩm     | `ItemShop`            |
+| Quà đăng nhập         | `LoginReward`         |
+| Bảng xếp hạng         | `Leaderboard`         |
+| Sự kiện đặc biệt      | `SpecialEvent`        |
+| Hòm thư               | `Mailbox`             |
+| Thông báo             | `Notification`        |
+| Hỗ trợ                | `Support`             |
+| Đổi thưởng            | `Redeem`              |
+| Hướng dẫn chơi        | `Guide`               |
+| Mời bạn               | `InviteFriend`        |
+| Gói ưu đãi            | `OfferPack`           |
+| Nạp tiền              | `TopUp`               |
+| Thử thách             | `Challenge`           |
+| Mini game             | `MiniGame`            |
+| Quà miễn phí          | `FreeGift`            |
+| Quay thưởng           | `Spin`                |
+| Mở khóa               | `Unlock`              |
+| Nâng cấp              | `Upgrade`             |
+| Đổi avatar            | `ChangeAvatar`        |
+| Cài đặt               | `Setting`             |
+
 ### Gợi ý tên màu sắc
 
 | Màu sắc    | Tên đặt màu | Hiển thị màu                                                                                                |
