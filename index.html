@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quy tắc đặt tên tài nguyên UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .color-sample {
+            display: inline-block;
+            width: 24px;
+            height: 16px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .table-sm th, .table-sm td {
+            padding: .3rem;
+        }
+        .note {
+            background: #fffbe6;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .tip {
+            background: #e7f7ef;
+            border-left: 4px solid #17a2b8;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: .5rem;
+        }
+        code {
+            background: #f8f9fa;
+            color: #d63384;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 95%;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container my-4">
+        <h1 class="mb-3">Quy tắc đặt tên tài nguyên UI</h1>
+
+        <h2 class="section-title h4">Cấu trúc tổng quát</h2>
+        <pre><code>[9scale?][type][feature?][color]_[size?]_[index?]</code></pre>
+
+        <h2 class="section-title h4">Mô tả các phần</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>Thành phần</th>
+                        <th>Bắt buộc</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>9scale</code></td>
+                        <td>❌</td>
+                        <td>Nếu sprite dùng 9-slice, thêm tiền tố <code>9scale</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td>✅</td>
+                        <td>Kiểu tài nguyên: <code>btn</code>, <code>icon</code>, <code>frame</code>, <code>bg</code>, <code>avatar</code>, <code>popup</code>, <code>title</code>, ...</td>
+                    </tr>
+                    <tr>
+                        <td><code>feature</code></td>
+                        <td>❌</td>
+                        <td>Tên tính năng sử dụng riêng biệt: <code>Native</code>, <code>Shop</code>, <code>Setting</code>, ...</td>
+                    </tr>
+                    <tr>
+                        <td><code>color</code></td>
+                        <td>✅</td>
+                        <td>Màu chính: <code>Gray</code>, <code>Blue</code>, <code>Red</code>, ...</td>
+                    </tr>
+                    <tr>
+                        <td><code>size</code></td>
+                        <td>❌</td>
+                        <td>Kích cỡ: <code>Big</code>, <code>Small</code>, ...</td>
+                    </tr>
+                    <tr>
+                        <td><code>index</code></td>
+                        <td>❌</td>
+                        <td>Phiên bản thứ tự: <code>1</code>, <code>2</code>, ...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title h4">Quy tắc viết hoa</h2>
+        <ul>
+            <li>Chữ cái đầu của tên file luôn viết thường.</li>
+            <li>Nếu sử dụng 9-slice, tên file phải bắt đầu bằng <code>9scale</code>, ví dụ: <code>9scaleFrameBlue_1</code> hoặc <code>9scale_frameBlue_1</code>.</li>
+            <li>Giữ nhất quán quy tắc này trong toàn bộ dự án để dễ đọc và quản lý tài nguyên.</li>
+        </ul>
+
+        <div class="note">
+            <strong>⚠️ Lưu ý quan trọng:</strong>
+            <ul class="mb-0">
+                <li>Không sử dụng tiếng Việt hoặc ký tự đặc biệt trong tên file.</li>
+                <li>Chỉ viết hoa chữ cái đầu của các phần bắt buộc, giữ nhất quán kiểu chữ trong toàn bộ dự án.</li>
+                <li>Nếu tài nguyên dùng cho nhiều tính năng, hãy bỏ qua phần <code>feature</code> để dùng chung.</li>
+                <li>Với tài nguyên có nhiều biến thể màu hoặc kích thước, luôn bổ sung phần <code>color</code> và <code>size</code> để dễ phân biệt.</li>
+                <li>Đặt tên ngắn gọn, dễ hiểu, ưu tiên mô tả chức năng chính của tài nguyên.</li>
+                <li>Nếu có nhiều phiên bản, luôn thêm phần <code>index</code> để tránh ghi đè file.</li>
+                <li>Sử dụng dấu gạch dưới <code>_</code> để phân tách các phần, không dùng dấu cách hoặc dấu gạch ngang <code>-</code>.</li>
+            </ul>
+        </div>
+
+        <div class="tip">
+            <strong>💡 Lưu ý về cách viết <code>9scale</code>:</strong>
+            <ul class="mb-0">
+                <li>Chỉ <b>dùng tiền tố</b> <code>9scale</code> (ví dụ: <code>9scale_frameBlue_1</code> hoặc <code>9scaleFrameBlue_1</code>).</li>
+                <li>🚫 Không pha trộn hai cách viết trong cùng một project để tránh nhầm lẫn và dễ quản lý tài nguyên.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title h4">🧪 Ví Dụ Đặt Tên</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Tên File</th>
+                        <th>Giải Thích</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>9scale_btnShopGray_Big_3</code></td><td>Button xám, to, dùng trong Shop, có 9-slice, phiên bản thứ 3</td></tr>
+                    <tr><td><code>9scaleBtnShopGray_Big_3</code></td><td>Button xám, to, dùng trong Shop, có 9-slice, phiên bản thứ 3</td></tr>
+                    <tr><td><code>9scale_frameProfileBlue_1</code></td><td>Frame hồ sơ, màu xanh, có 9-slice, phiên bản 1</td></tr>
+                    <tr><td><code>9scaleFrameProfileBlue_1</code></td><td>Frame hồ sơ, màu xanh, có 9-slice, phiên bản 1</td></tr>
+                    <tr><td><code>9scale_popupUpgradeBlue_Big</code></td><td>Popup nâng cấp, màu xanh, to, có 9-slice</td></tr>
+                    <tr><td><code>9scalePopupUpgradeBlue_Big</code></td><td>Popup nâng cấp, màu xanh, to, có 9-slice</td></tr>
+                    <tr><td><code>9scaleBgDailyRewardGray</code></td><td>Background thưởng ngày, màu xám, có 9-slice</td></tr>
+                    <tr><td><code>9scaleFrameProfileBlue</code></td><td>Frame giao diện Profile, màu xanh, dùng 9-slice</td></tr>
+                    <tr><td><code>btnGray</code></td><td>Nút màu xám, dùng chung</td></tr>
+                    <tr><td><code>btnLoginBlue_Big</code></td><td>Nút màu xanh, to, dùng riêng cho tính năng Login</td></tr>
+                    <tr><td><code>btnShopRed_Small_2</code></td><td>Nút đỏ, nhỏ, phiên bản thứ 2 dùng riêng trong Shop</td></tr>
+                    <tr><td><code>btnTutorialGreen_Tiny</code></td><td>Button xanh lá nhỏ dành riêng cho Tutorial</td></tr>
+                    <tr><td><code>btnInviteFriendPurple_Small</code></td><td>Nút mời bạn, màu tím, nhỏ</td></tr>
+                    <tr><td><code>btnDailyRewardOrange_Tall_1</code></td><td>Nút thưởng ngày, màu cam, cao, bản 1</td></tr>
+                    <tr><td><code>bgNative_Big</code></td><td>Background to dùng riêng trong UI Native</td></tr>
+                    <tr><td><code>bg_Big</code></td><td>Background to, dùng chung</td></tr>
+                    <tr><td><code>iconAvatarGray_Small</code></td><td>Icon avatar màu xám, kích thước nhỏ</td></tr>
+                    <tr><td><code>iconRewardYellow_1</code></td><td>Icon phần thưởng màu vàng, biến thể thứ 1</td></tr>
+                    <tr><td><code>iconCurrencyGold_Small</code></td><td>Icon tiền vàng, nhỏ</td></tr>
+                    <tr><td><code>iconLevelUpBlue_Small</code></td><td>Icon lên cấp, màu xanh, nhỏ</td></tr>
+                    <tr><td><code>iconMissionYellow_2</code></td><td>Icon nhiệm vụ, màu vàng, bản số 2</td></tr>
+                    <tr><td><code>iconGachaTicketRed_Tiny</code></td><td>Icon vé gacha, màu đỏ, kích thước nhỏ</td></tr>
+                    <tr><td><code>iconQuestStarYellow_Small_2</code></td><td>Icon sao nhiệm vụ, vàng, nhỏ, bản 2</td></tr>
+                    <tr><td><code>avatarFriendRed_Small_2</code></td><td>Avatar bạn bè, màu đỏ, nhỏ, phiên bản thứ 2</td></tr>
+                    <tr><td><code>frameAchievementGold_Wide_2</code></td><td>Frame thành tựu, màu vàng, rộng, bản 2</td></tr>
+                    <tr><td><code>frameEventRed_Big_1</code></td><td>Frame dùng trong sự kiện, đỏ, to, bản 1</td></tr>
+                    <tr><td><code>popupSetting</code></td><td>Popup dùng riêng cho UI cài đặt</td></tr>
+                    <tr><td><code>popupWarning_Red</code></td><td>Popup cảnh báo, màu đỏ</td></tr>
+                    <tr><td><code>popupBackgroundGray_1</code></td><td>Hình nền của popup, màu xám, phiên bản 1</td></tr>
+                    <tr><td><code>titleMatchmakingBlue_Big</code></td><td>Tiêu đề trong UI matchmaking, màu xanh, to</td></tr>
+                    <tr><td><code>titleEventHalloweenPurple_Big_1</code></td><td>Tiêu đề sự kiện Halloween, màu tím, to, bản 1</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title h4">Ví dụ về chức năng phụ</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Tên File</th>
+                        <th>Chức năng phụ</th>
+                        <th>Giải Thích</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>popupBg</code></td><td>Bg</td><td>Hình nền của popup, phân biệt với popup chính</td></tr>
+                    <tr><td><code>btnShopRed_Small</code></td><td>Shop</td><td>Nút dùng riêng cho cửa hàng</td></tr>
+                    <tr><td><code>iconAvatarGray</code></td><td>Avatar</td><td>Icon đại diện người dùng</td></tr>
+                    <tr><td><code>frameProfileBlue</code></td><td>Profile</td><td>Frame dành riêng cho giao diện hồ sơ</td></tr>
+                    <tr><td><code>titleMatchmaking</code></td><td>Matchmaking</td><td>Tiêu đề dùng riêng cho UI ghép trận</td></tr>
+                    <tr><td><code>iconQuestStar</code></td><td>QuestStar</td><td>Icon sao nhiệm vụ, phân biệt với icon nhiệm vụ</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title h4">Gợi ý tên feature</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Feature UI</th>
+                        <th>Gợi ý đặt tên feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Cài đặt</td><td><code>Setting</code></td></tr>
+                    <tr><td>Cửa hàng</td><td><code>Shop</code></td></tr>
+                    <tr><td>Hướng dẫn</td><td><code>Tutorial</code></td></tr>
+                    <tr><td>Nhiệm vụ</td><td><code>Quest</code></td></tr>
+                    <tr><td>Gacha</td><td><code>Gacha</code></td></tr>
+                    <tr><td>Thưởng ngày</td><td><code>DailyReward</code></td></tr>
+                    <tr><td>Matchmaking</td><td><code>Matchmaking</code></td></tr>
+                    <tr><td>Nâng cấp</td><td><code>Upgrade</code></td></tr>
+                    <tr><td>Đăng nhập</td><td><code>Login</code></td></tr>
+                    <tr><td>Mời bạn</td><td><code>InviteFriend</code></td></tr>
+                    <tr><td>Hồ sơ người chơi</td><td><code>Profile</code></td></tr>
+                    <tr><td>Sự kiện</td><td><code>Event</code></td></tr>
+                    <tr><td>Chiến thắng</td><td><code>Victory</code></td></tr>
+                    <tr><td>Thất bại</td><td><code>Defeat</code></td></tr>
+                    <tr><td>Thành tựu</td><td><code>Achievement</code></td></tr>
+                    <tr><td>Giao diện nền popup</td><td><code>Background</code></td></tr>
+                    <tr><td>Vé gacha</td><td><code>GachaTicket</code></td></tr>
+                    <tr><td>Hộp quà</td><td><code>GiftBox</code></td></tr>
+                    <tr><td>Thẻ bài</td><td><code>Card</code></td></tr>
+                    <tr><td>Màn hình kết thúc trận</td><td><code>Result</code></td></tr>
+                    <tr><td>Giao diện chính</td><td><code>MainUI</code></td></tr>
+                    <tr><td>Hỗ trợ khách hàng</td><td><code>Support</code></td></tr>
+                    <tr><td>Sự kiện đặc biệt</td><td><code>SpecialEvent</code></td></tr>
+                    <tr><td>Thông báo</td><td><code>Notification</code></td></tr>
+                    <tr><td>Quà đăng nhập</td><td><code>LoginReward</code></td></tr>
+                    <tr><td>Bảng xếp hạng</td><td><code>Leaderboard</code></td></tr>
+                    <tr><td>Hòm thư</td><td><code>Mailbox</code></td></tr>
+                    <tr><td>Đổi thưởng</td><td><code>Redeem</code></td></tr>
+                    <tr><td>Nạp tiền</td><td><code>TopUp</code></td></tr>
+                    <tr><td>Quay số may mắn</td><td><code>LuckySpin</code></td></tr>
+                    <tr><td>Hướng dẫn chơi</td><td><code>Guide</code></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title h4">Gợi ý tên feature cho game chiến thuật (Strategy)</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Feature UI</th>
+                        <th>Gợi ý đặt tên feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nhân vật</td><td><code>Character</code></td></tr>
+                    <tr><td>Đội hình</td><td><code>Formation</code></td></tr>
+                    <tr><td>Kỹ năng</td><td><code>Skill</code></td></tr>
+                    <tr><td>Trang bị</td><td><code>Equipment</code></td></tr>
+                    <tr><td>Chiến dịch</td><td><code>Campaign</code></td></tr>
+                    <tr><td>Bản đồ</td><td><code>Map</code></td></tr>
+                    <tr><td>Quân đội</td><td><code>Army</code></td></tr>
+                    <tr><td>Lực lượng</td><td><code>Faction</code></td></tr>
+                    <tr><td>Nâng cấp nhân vật</td><td><code>UpgradeCharacter</code></td></tr>
+                    <tr><td>Quản lý đội hình</td><td><code>ManageFormation</code></td></tr>
+                    <tr><td>Xây dựng căn cứ</td><td><code>BaseBuilding</code></td></tr>
+                    <tr><td>Thu thập tài nguyên</td><td><code>ResourceCollection</code></td></tr>
+                    <tr><td>Nghiên cứu công nghệ</td><td><code>TechResearch</code></td></tr>
+                    <tr><td>Phòng thủ</td><td><code>Defense</code></td></tr>
+                    <tr><td>Tấn công</td><td><code>Attack</code></td></tr>
+                    <tr><td>Chiếm đóng</td><td><code>Occupation</code></td></tr>
+                    <tr><td>Giao dịch</td><td><code>Trade</code></td></tr>
+                    <tr><td>Quản lý quân lính</td><td><code>TroopManagement</code></td></tr>
+                    <tr><td>Sự kiện đặc biệt</td><td><code>SpecialEvent</code></td></tr>
+                    <tr><td>Đấu trường</td><td><code>Arena</code></td></tr>
+                    <tr><td>Nhiệm vụ phụ</td><td><code>SideQuest</code></td></tr>
+                    <tr><td>Hợp tác đồng minh</td><td><code>Alliance</code></td></tr>
+                    <tr><td>Thống kê trận đấu</td><td><code>BattleStats</code></td></tr>
+                    <tr><td>Xếp hạng</td><td><code>Ranking</code></td></tr>
+                    <tr><td>Huấn luyện</td><td><code>Training</code></td></tr>
+                    <tr><td>Mở rộng lãnh thổ</td><td><code>TerritoryExpansion</code></td></tr>
+                    <tr><td>Chiến thuật</td><td><code>Strategy</code></td></tr>
+                    <tr><td>Quản lý tài nguyên</td><td><code>ResourceManagement</code></td></tr>
+                    <tr><td>Thám hiểm</td><td><code>Exploration</code></td></tr>
+                    <tr><td>Đàm phán</td><td><code>Diplomacy</code></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title h4">Gợi ý tên feature cho game casual</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Feature UI</th>
+                        <th>Gợi ý đặt tên feature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Trang chủ</td><td><code>Home</code></td></tr>
+                    <tr><td>Chơi nhanh</td><td><code>QuickPlay</code></td></tr>
+                    <tr><td>Nhiệm vụ ngày</td><td><code>DailyQuest</code></td></tr>
+                    <tr><td>Vòng quay may mắn</td><td><code>LuckyWheel</code></td></tr>
+                    <tr><td>Sưu tập</td><td><code>Collection</code></td></tr>
+                    <tr><td>Thành tích</td><td><code>Achievement</code></td></tr>
+                    <tr><td>Cửa hàng vật phẩm</td><td><code>ItemShop</code></td></tr>
+                    <tr><td>Quà đăng nhập</td><td><code>LoginReward</code></td></tr>
+                    <tr><td>Bảng xếp hạng</td><td><code>Leaderboard</code></td></tr>
+                    <tr><td>Sự kiện đặc biệt</td><td><code>SpecialEvent</code></td></tr>
+                    <tr><td>Hòm thư</td><td><code>Mailbox</code></td></tr>
+                    <tr><td>Thông báo</td><td><code>Notification</code></td></tr>
+                    <tr><td>Hỗ trợ</td><td><code>Support</code></td></tr>
+                    <tr><td>Đổi thưởng</td><td><code>Redeem</code></td></tr>
+                    <tr><td>Hướng dẫn chơi</td><td><code>Guide</code></td></tr>
+                    <tr><td>Mời bạn</td><td><code>InviteFriend</code></td></tr>
+                    <tr><td>Gói ưu đãi</td><td><code>OfferPack</code></td></tr>
+                    <tr><td>Nạp tiền</td><td><code>TopUp</code></td></tr>
+                    <tr><td>Thử thách</td><td><code>Challenge</code></td></tr>
+                    <tr><td>Mini game</td><td><code>MiniGame</code></td></tr>
+                    <tr><td>Quà miễn phí</td><td><code>FreeGift</code></td></tr>
+                    <tr><td>Quay thưởng</td><td><code>Spin</code></td></tr>
+                    <tr><td>Mở khóa</td><td><code>Unlock</code></td></tr>
+                    <tr><td>Nâng cấp</td><td><code>Upgrade</code></td></tr>
+                    <tr><td>Đổi avatar</td><td><code>ChangeAvatar</code></td></tr>
+                    <tr><td>Cài đặt</td><td><code>Setting</code></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title h4">Gợi ý tên màu sắc</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Màu sắc</th>
+                        <th>Tên đặt màu</th>
+                        <th>Hiển thị màu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Xám</td><td><code>Gray</code></td><td><span class="color-sample" style="background:#808080"></span></td></tr>
+                    <tr><td>Xanh dương</td><td><code>Blue</code></td><td><span class="color-sample" style="background:#2196F3"></span></td></tr>
+                    <tr><td>Đỏ</td><td><code>Red</code></td><td><span class="color-sample" style="background:#F44336"></span></td></tr>
+                    <tr><td>Vàng</td><td><code>Yellow</code></td><td><span class="color-sample" style="background:#FFEB3B"></span></td></tr>
+                    <tr><td>Xanh lá</td><td><code>Green</code></td><td><span class="color-sample" style="background:#4CAF50"></span></td></tr>
+                    <tr><td>Tím</td><td><code>Purple</code></td><td><span class="color-sample" style="background:#9C27B0"></span></td></tr>
+                    <tr><td>Cam</td><td><code>Orange</code></td><td><span class="color-sample" style="background:#FF9800"></span></td></tr>
+                    <tr><td>Vàng kim</td><td><code>Gold</code></td><td><span class="color-sample" style="background:#FFD700"></span></td></tr>
+                    <tr><td>Đen</td><td><code>Black</code></td><td><span class="color-sample" style="background:#222"></span></td></tr>
+                    <tr><td>Trắng</td><td><code>White</code></td><td><span class="color-sample" style="background:#fff"></span></td></tr>
+                    <tr><td>Nâu</td><td><code>Brown</code></td><td><span class="color-sample" style="background:#795548"></span></td></tr>
+                    <tr><td>Hồng</td><td><code>Pink</code></td><td><span class="color-sample" style="background:#E91E63"></span></td></tr>
+                    <tr><td>Xanh ngọc</td><td><code>Cyan</code></td><td><span class="color-sample" style="background:#00BCD4"></span></td></tr>
+                    <tr><td>Xanh biển</td><td><code>Teal</code></td><td><span class="color-sample" style="background:#009688"></span></td></tr>
+                    <tr><td>Bạc</td><td><code>Silver</code></td><td><span class="color-sample" style="background:#C0C0C0"></span></td></tr>
+                    <tr><td>Đồng</td><td><code>Copper</code></td><td><span class="color-sample" style="background:#B87333"></span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title h4">Gợi ý tên kích thước</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Kích thước</th>
+                        <th>Tên đặt kích thước</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>To</td><td><code>Big</code></td></tr>
+                    <tr><td>Nhỏ</td><td><code>Small</code></td></tr>
+                    <tr><td>Rất nhỏ</td><td><code>Tiny</code></td></tr>
+                    <tr><td>Rộng</td><td><code>Wide</code></td></tr>
+                    <tr><td>Cao</td><td><code>Tall</code></td></tr>
+                    <tr><td>Dài</td><td><code>Long</code></td></tr>
+                    <tr><td>Ngắn</td><td><code>Short</code></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-title h4">Gợi ý nâng cao (định dạng tối ưu nên dùng nếu nhất quán toàn bộ team)</h2>
+        <pre><code>[type]_[feature?]_[color]_[size?]_[index?]_[9scale?]</code></pre>
+        <p>Ví dụ: <code>btn_shop_gray_big_2_9scale</code></p>
+
+        <h2 class="section-title h4">Ví dụ nâng cao</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Tên File</th>
+                        <th>Giải Thích</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>btn_shop_gray_big_2_9scale</code></td><td>Button dùng trong Shop, màu xám, to, phiên bản 2, có 9-slice</td></tr>
+                    <tr><td><code>icon_profile_blue_small</code></td><td>Icon hồ sơ người chơi, màu xanh dương, nhỏ</td></tr>
+                    <tr><td><code>bg_dailyreward_gray_9scale</code></td><td>Background thưởng ngày, màu xám, có 9-slice</td></tr>
+                    <tr><td><code>frame_event_red_big_1</code></td><td>Frame sự kiện, màu đỏ, to, bản 1</td></tr>
+                    <tr><td><code>popup_setting_red</code></td><td>Popup cài đặt, màu đỏ</td></tr>
+                    <tr><td><code>title_matchmaking_blue_big</code></td><td>Tiêu đề matchmaking, màu xanh dương, to</td></tr>
+                    <tr><td><code>icon_gacha_ticket_red_tiny</code></td><td>Icon vé gacha, màu đỏ, rất nhỏ</td></tr>
+                    <tr><td><code>btn_tutorial_green_tiny</code></td><td>Button hướng dẫn, màu xanh lá, rất nhỏ</td></tr>
+                    <tr><td><code>avatar_friend_red_small_2</code></td><td>Avatar bạn bè, màu đỏ, nhỏ, phiên bản 2</td></tr>
+                    <tr><td><code>icon_quest_star_yellow_small_2</code></td><td>Icon sao nhiệm vụ, màu vàng, nhỏ, bản 2</td></tr>
+                    <tr><td><code>frame_achievement_gold_wide_2</code></td><td>Frame thành tựu, màu vàng kim, rộng, bản 2</td></tr>
+                    <tr><td><code>btn_dailyreward_orange_tall_1</code></td><td>Nút thưởng ngày, màu cam, cao, bản 1</td></tr>
+                    <tr><td><code>bg_victory_green_big</code></td><td>Background chiến thắng, màu xanh lá, to</td></tr>
+                    <tr><td><code>icon_mission_yellow_2</code></td><td>Icon nhiệm vụ, màu vàng, bản số 2</td></tr>
+                    <tr><td><code>popup_background_gray_1</code></td><td>Hình nền popup, màu xám, phiên bản 1</td></tr>
+                    <tr><td><code>icon_currency_gold_small</code></td><td>Icon tiền vàng, nhỏ</td></tr>
+                    <tr><td><code>frame_profile_blue_9scale</code></td><td>Frame hồ sơ, màu xanh dương, có 9-slice</td></tr>
+                    <tr><td><code>btn_invitefriend_purple_small</code></td><td>Nút mời bạn, màu tím, nhỏ</td></tr>
+                    <tr><td><code>icon_levelup_blue_small</code></td><td>Icon lên cấp, màu xanh dương, nhỏ</td></tr>
+                    <tr><td><code>bg_native_big</code></td><td>Background dùng riêng cho UI Native, to</td></tr>
+                    <tr><td><code>icon_giftbox_pink_tiny</code></td><td>Icon hộp quà, màu hồng, rất nhỏ</td></tr>
+                    <tr><td><code>card_result_brown_long</code></td><td>Thẻ bài kết thúc trận, màu nâu, dài</td></tr>
+                    <tr><td><code>popup_defeat_black</code></td><td>Popup thất bại, màu đen</td></tr>
+                    <tr><td><code>title_event_halloween_purple_big_1</code></td><td>Tiêu đề sự kiện Halloween, màu tím, to, bản 1</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr class="my-4">
+        <footer class="text-muted small">
+            <em>Được viết bởi Istaroth [PL], mong nhận được đóng góp thêm để hoàn thiện quy tắc này.<br>
+            Nếu có ý kiến hoặc bổ sung, vui lòng gửi phản hồi qua email hoặc mở issue trên repository.</em>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html></table></div>
