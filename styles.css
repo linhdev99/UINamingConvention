@@ -1,0 +1,47 @@
+.color-sample {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table-sm th,
+.table-sm td {
+    padding: .3rem;
+}
+
+.note {
+    background: #fffbe6;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tip {
+    background: #e7f7ef;
+    border-left: 4px solid #17a2b8;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: .5rem;
+}
+
+code {
+    background: #f8f9fa;
+    color: #d63384;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 95%;
+}
