@@ -3,14 +3,14 @@
 ### Cấu trúc tổng quát
 
 ```
-[9scale?][type][feature?][color]_[size?]_[index?]
+[9slice?][type][feature?][color]_[size?]_[index?]
 ```
 
 ### Mô tả các phần:
 
 | Thành phần | Bắt buộc | Mô tả                                                                                                                                       |
 | ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `9scale`   | ❌       | Nếu sprite dùng 9-slice, thêm tiền tố `9scale` hoặc hậu tố `_9scale`                                                                        |
+| `9slice`   | ❌       | Nếu sprite dùng 9-slice, thêm tiền tố `9slice` hoặc hậu tố `_9slice`                                                                        |
 | `type`     | ✅       | Kiểu tài nguyên: `btn`, `icon`, `frame`, `bg`, `avatar`, `popup`, `title`, ... Có thể là cụm từ ghép như `popupBg` nếu cần rõ chức năng phụ |
 | `feature`  | ❌       | Tên tính năng sử dụng riêng biệt: `Native`, `Shop`, `Setting`, ... Nếu dùng chung giữa nhiều UI thì bỏ qua                                  |
 | `color`    | ✅       | Màu chính: `Gray`, `Blue`, `Red`, `Yellow`, ...                                                                                             |
@@ -20,7 +20,7 @@
 ### Quy tắc viết hoa
 
 - Chữ cái đầu của tên file luôn viết thường.
-- Nếu sử dụng 9-slice, tên file phải bắt đầu bằng `9scale`, ví dụ: `9scaleFrameBlue_1` hoặc `9scale_frameBlue_1`, sau đó đến các thành phần còn lại (`type`, `feature`, `color`, `size`, ...).
+- Nếu sử dụng 9-slice, tên file phải bắt đầu bằng `9slice`, ví dụ: `9sliceFrameBlue_1` hoặc `9slice_frameBlue_1`, sau đó đến các thành phần còn lại (`type`, `feature`, `color`, `size`, ...).
 - Giữ nhất quán quy tắc này trong toàn bộ dự án để dễ đọc và quản lý tài nguyên.
 
 > ⚠️ **Lưu ý quan trọng:**
@@ -33,23 +33,23 @@
 > - Nếu có nhiều phiên bản, luôn thêm phần `index` để tránh ghi đè file.
 > - Sử dụng dấu gạch dưới `_` để phân tách các phần, không dùng dấu cách hoặc dấu gạch ngang `-`.
 
-> 💡 **Lưu ý về cách viết `9scale`:**
+> 💡 **Lưu ý về cách viết `9slice`:**
 >
-> - Chỉ **dùng tiền tố** `9scale` (ví dụ: `9scale_frameBlue_1` hoặc `9scaleFrameBlue_1`) và **tuyệt đối không dùng hậu tố** như `frameBlue_1_9scale`.
+> - Chỉ **dùng tiền tố** `9slice` (ví dụ: `9slice_frameBlue_1` hoặc `9sliceFrameBlue_1`) và **tuyệt đối không dùng hậu tố** như `frameBlue_1_9slice`.
 > - 🚫 Không pha trộn hai cách viết trong cùng một project để tránh nhầm lẫn và dễ quản lý tài nguyên.
 
 ## 🧪 Ví Dụ Đặt Tên
 
 | Tên File                          | Giải Thích                                                   |
 | --------------------------------- | ------------------------------------------------------------ |
-| `9scale_btnShopGray_Big_3`        | Button xám, to, dùng trong Shop, có 9-slice, phiên bản thứ 3 |
-| `9scaleBtnShopGray_Big_3`         | Button xám, to, dùng trong Shop, có 9-slice, phiên bản thứ 3 |
-| `9scale_frameProfileBlue_1`       | Frame hồ sơ, màu xanh, có 9-slice, phiên bản 1               |
-| `9scaleFrameProfileBlue_1`        | Frame hồ sơ, màu xanh, có 9-slice, phiên bản 1               |
-| `9scale_popupUpgradeBlue_Big`     | Popup nâng cấp, màu xanh, to, có 9-slice                     |
-| `9scalePopupUpgradeBlue_Big`      | Popup nâng cấp, màu xanh, to, có 9-slice                     |
-| `9scaleBgDailyRewardGray`         | Background thưởng ngày, màu xám, có 9-slice                  |
-| `9scaleFrameProfileBlue`          | Frame giao diện Profile, màu xanh, dùng 9-slice              |
+| `9slice_btnShopGray_Big_3`        | Button xám, to, dùng trong Shop, có 9-slice, phiên bản thứ 3 |
+| `9sliceBtnShopGray_Big_3`         | Button xám, to, dùng trong Shop, có 9-slice, phiên bản thứ 3 |
+| `9slice_frameProfileBlue_1`       | Frame hồ sơ, màu xanh, có 9-slice, phiên bản 1               |
+| `9sliceFrameProfileBlue_1`        | Frame hồ sơ, màu xanh, có 9-slice, phiên bản 1               |
+| `9slice_popupUpgradeBlue_Big`     | Popup nâng cấp, màu xanh, to, có 9-slice                     |
+| `9slicePopupUpgradeBlue_Big`      | Popup nâng cấp, màu xanh, to, có 9-slice                     |
+| `9sliceBgDailyRewardGray`         | Background thưởng ngày, màu xám, có 9-slice                  |
+| `9sliceFrameProfileBlue`          | Frame giao diện Profile, màu xanh, dùng 9-slice              |
 | `btnGray`                         | Nút màu xám, dùng chung                                      |
 | `btnLoginBlue_Big`                | Nút màu xanh, to, dùng riêng cho tính năng Login             |
 | `btnShopRed_Small_2`              | Nút đỏ, nhỏ, phiên bản thứ 2 dùng riêng trong Shop           |
@@ -225,18 +225,18 @@
 ### Gợi ý nâng cao (định dạng tối ưu nên dùng nếu nhất quán toàn bộ team):
 
 ```
-[type]_[feature?]_[color]_[size?]_[index?]_[9scale?]
+[type]_[feature?]_[color]_[size?]_[index?]_[9slice?]
 ```
 
-Ví dụ: `btn_shop_gray_big_2_9scale`
+Ví dụ: `btn_shop_gray_big_2_9slice`
 
 ### Ví dụ nâng cao
 
 | Tên File                             | Giải Thích                                                   |
 | ------------------------------------ | ------------------------------------------------------------ |
-| `btn_shop_gray_big_2_9scale`         | Button dùng trong Shop, màu xám, to, phiên bản 2, có 9-slice |
+| `btn_shop_gray_big_2_9slice`         | Button dùng trong Shop, màu xám, to, phiên bản 2, có 9-slice |
 | `icon_profile_blue_small`            | Icon hồ sơ người chơi, màu xanh dương, nhỏ                   |
-| `bg_dailyreward_gray_9scale`         | Background thưởng ngày, màu xám, có 9-slice                  |
+| `bg_dailyreward_gray_9slice`         | Background thưởng ngày, màu xám, có 9-slice                  |
 | `frame_event_red_big_1`              | Frame sự kiện, màu đỏ, to, bản 1                             |
 | `popup_setting_red`                  | Popup cài đặt, màu đỏ                                        |
 | `title_matchmaking_blue_big`         | Tiêu đề matchmaking, màu xanh dương, to                      |
@@ -250,7 +250,7 @@ Ví dụ: `btn_shop_gray_big_2_9scale`
 | `icon_mission_yellow_2`              | Icon nhiệm vụ, màu vàng, bản số 2                            |
 | `popup_background_gray_1`            | Hình nền popup, màu xám, phiên bản 1                         |
 | `icon_currency_gold_small`           | Icon tiền vàng, nhỏ                                          |
-| `frame_profile_blue_9scale`          | Frame hồ sơ, màu xanh dương, có 9-slice                      |
+| `frame_profile_blue_9slice`          | Frame hồ sơ, màu xanh dương, có 9-slice                      |
 | `btn_invitefriend_purple_small`      | Nút mời bạn, màu tím, nhỏ                                    |
 | `icon_levelup_blue_small`            | Icon lên cấp, màu xanh dương, nhỏ                            |
 | `bg_native_big`                      | Background dùng riêng cho UI Native, to                      |
